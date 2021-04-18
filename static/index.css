@@ -1,0 +1,787 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #efeeee;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #146783;
+}
+
+#loading {
+  position: absolute;
+  background-color: #efeeee;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+}
+
+#loading img {
+  height: 200px;
+}
+
+/* --------------------------------------   Fixed tops    -------------------------------- */
+
+.share-section {
+  position: fixed;
+  display: inline-block;
+  right: 3.5%;
+  bottom: 2.5%;
+  z-index: 1;
+}
+
+.share-section-left {
+  position: fixed;
+  display: inline-block;
+  left: 3.5%;
+  bottom: 2.5%;
+  z-index: 1;
+}
+
+#overlayqr {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#overlayshare {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+}
+
+#textqr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+#share-btn {
+  z-index: 2;
+}
+
+.share-content {
+  display: none;
+  background-color: #efeeee;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1;
+  min-width: 55px;
+  right: 3%;
+  bottom: 1.6%;
+  border-radius: 50px;
+  padding-bottom: 6px;
+}
+
+.brand-logo-fixedtops {
+  border-radius: 20%;
+  height: 50px;
+  background-color: rgb(173, 172, 172);
+}
+.share-content a {
+  display: block;
+  cursor: pointer;
+}
+
+.share-content a:hover {
+  background-color: rgb(226, 224, 224);
+}
+
+.share-content a i {
+  font-size: 30px;
+  padding: 8px;
+}
+
+.share-section:hover .share-content {
+  display: block;
+}
+
+.share-section button i {
+  font-size: 20px;
+}
+
+.share-section-left button i {
+  font-size: 20px;
+}
+
+#whatsapp {
+  color: #228b22;
+}
+
+#twitter {
+  color: #1e90ff;
+}
+
+#facebook {
+  color: #483d8b;
+}
+
+#linkedin {
+  color: #191970;
+}
+
+.go-to-top {
+  position: fixed;
+  right: 3%;
+  bottom: 2%;
+  z-index: 1;
+}
+
+.go-to-top i {
+  font-size: 25px;
+  cursor: pointer;
+  background: #efeeee;
+  padding: 4px;
+  border-radius: 10px;
+  border: 2px solid rgb(36, 35, 35);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-tops button {
+  border-radius: 50%;
+  border-width: 4px;
+}
+
+/* ------------------------------------------   SECTION-1  --------------------------------------- */
+#section1 {
+  background-color: #caddf7;
+
+  transform: skewY(-20deg);
+  margin-top: -300px;
+}
+
+#section1 .intro-content {
+  transform: skewY(+20deg);
+  padding-top: 300px;
+  position: relative;
+}
+
+.navigation {
+  padding: 12px 9px;
+}
+
+.navbar-brand {
+  font-family: "Fira Sans", sans-serif;
+  color: #383754;
+  font-size: 40px;
+}
+
+.brand-logo {
+  height: 60px;
+  width: 60px;
+  margin-right: 3px;
+}
+
+#navbarNav {
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  font-weight: bold;
+}
+
+#navbarNav ul li:hover {
+  border-bottom: solid 2px grey;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  padding-top: 270px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 5px;
+  text-decoration: none;
+  font-size: 31px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 350px;
+  left: 84%;
+}
+
+.intro-text {
+  font-family: "Fira Sans", sans-serif;
+  /* font-weight: bolder; */
+  padding: 2% 0 0 8%;
+  color: #4a4969;
+}
+.intro-txt-line-2 {
+  color: #52525f;
+  font-family: "Montserrat", sans-serif;
+}
+.intro-text h1 a {
+  color: #1d1c2e;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.intro-img {
+  height: 250px;
+  padding-right: 30px;
+}
+
+.intro-img-div {
+  text-align: right;
+}
+
+.add2home {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  bottom: 50px;
+}
+.add2home button {
+  margin: 5px;
+  border-radius: 60px;
+  display: inline;
+}
+
+.twinbtns-mob {
+  display: none;
+}
+
+.twinbtns-pc {
+  display: block;
+}
+
+/* -----------------------------------    SECTION - 2   --------------------------------------- */
+
+.section2,
+.section3 {
+  position: relative;
+}
+
+.section2 {
+  margin-top: 300px;
+}
+.img-input-sec {
+  background-color: #efeeee;
+  border-radius: 15px;
+  border: solid 1px rgb(207, 206, 206);
+  /* box-shadow: 10px 10px 16px -2px #ccc, -10px -10px 16px -2px #fff; */
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* .upload-img-div {
+  text-align: right;
+  margin-top: 15px;
+  margin-right: 10px;
+} */
+
+.upload-img {
+  height: 120px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.img-input-sec h2 {
+  font-family: "Fira Sans", sans-serif;
+  color: #383754;
+  font-weight: bold;
+  text-align: center;
+}
+
+.img-input-sec button {
+  margin: 20px;
+  border-radius: 40px;
+}
+
+.video-canvas {
+  text-align: center;
+}
+
+#user-input-img {
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 3px;
+}
+
+#snap-canvas {
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 3px;
+}
+.upload-btn-div {
+  text-align: center;
+}
+
+.camera-upload,
+.custom-upload {
+  background-color: #e6e1e1;
+  border-radius: 15px;
+}
+
+.custom-upload {
+  text-align: center;
+}
+
+#snap-img,
+#flip-button {
+  border: 3px solid;
+}
+
+.upload-btns-add {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+}
+
+.fa-whatsapp:hover {
+  color: rgb(24, 173, 24);
+}
+
+/* ------------------------------------SECTION-3------------------------------------------------ */
+
+.captioning-sec {
+  background-color: #efeeee;
+  border-radius: 15px;
+  border: solid 1px rgb(207, 206, 206);
+  /* box-shadow: 10px 10px 16px -2px #ccc, -10px -10px 16px -2px #fff; */
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+}
+
+.captioning-sec-txt {
+  position: relative;
+}
+
+.captioning-sec-txt h2 {
+  font-family: "Fira Sans", sans-serif;
+  color: #383754;
+  font-weight: bold;
+  text-align: center;
+}
+
+.captioning-sec-txt h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #6f6f72;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* --------------------------------------------    FOOTER-SECTION ------------------------------- */
+
+.footer-sec {
+  background-color: #383754;
+  font-family: "Montserrat", sans-serif;
+  color: #efeeee;
+  position: relative;
+}
+
+.foot-content {
+  padding: 15px;
+}
+.foot-content h6,
+.guide-txt h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  color: #e9e8e8;
+}
+.foot-content p {
+  padding: 0;
+  margin: 0;
+  font-size: smaller;
+  color: #afadad;
+}
+
+.social-icons {
+  margin: 3px;
+  left: 5px;
+  font-size: x-large;
+  color: #dfdddd;
+  margin: 8px 16px 0 0;
+}
+
+.social-icons:hover {
+  color: #83d8f5;
+}
+
+.foot-logo-txt {
+  position: absolute;
+}
+
+.guide-txt {
+  position: absolute;
+  top: -6px;
+  right: 20px;
+  text-align: right;
+}
+
+.vit-logo {
+  position: absolute;
+  bottom: 35px;
+  right: 37.5%;
+}
+
+.vit-img {
+  border-radius: 5px;
+  height: 120px;
+}
+
+.capstone-txt {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  color: #a0a0a0;
+  bottom: 5px;
+  right: 20px;
+  text-align: right;
+}
+
+/* ---------------------------------------------MOBILE---------------------------------------- */
+
+@media screen and (max-width: 500px) {
+  #loading img {
+    height: 150px;
+  }
+  /* --------------------------------  fixed tops ----------------------------------------------- */
+
+  /* --------------------------------------SECTION-1-------------------------------------- */
+  .navbar-brand {
+    font-family: "Pacifico", cursive;
+    font-size: 21px;
+  }
+
+  .brand-logo {
+    display: none;
+  }
+
+  .intro-img {
+    margin-top: 20px;
+    height: 150px;
+  }
+
+  .intro-text {
+    padding: 3% 0 0 3%;
+  }
+
+  .add2home {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    color: #383754;
+    bottom: -50px;
+  }
+
+  .add2home button {
+    margin: 6px;
+    border-radius: 60px;
+  }
+
+  .twinbtns-pc {
+    display: none;
+  }
+  .twinbtns-mob {
+    display: block;
+  }
+  /* ----------------------------------------   SECTION-2   ---------------------------------- */
+
+  .section2 {
+    margin-top: 120px;
+  }
+
+  .upload-img {
+    display: none;
+  }
+
+  .img-input-sec h2 {
+    font-family: "Fira Sans", sans-serif;
+    color: #383754;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .img-input-sec button {
+    margin: 20px;
+    border-radius: 40px;
+  }
+
+  .video-canvas {
+    text-align: center;
+  }
+
+  #user-input-img {
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+  }
+
+  #snap-canvas {
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+  }
+
+  .upload-btn-div {
+    text-align: center;
+  }
+
+  .custom-upload label,
+  .custom-upload input {
+    text-align: center;
+  }
+
+  input {
+    position: relative;
+    left: 14%;
+  }
+
+  .upload-btns-add {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+  }
+
+  .fa-whatsapp:hover {
+    color: rgb(24, 173, 24);
+  }
+
+  /* -------------------------------------SECTION-3------------------------------------------- */
+
+  /* ---------------------------------------FOOTER-SECTION---------------------------------- */
+
+  .foot-logo-txt {
+    position: relative;
+  }
+
+  .foot-content {
+    text-align: center;
+  }
+
+  .guide-txt {
+    position: relative;
+    color: #c9c1c1;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+  }
+
+  .vit-logo {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+
+  .vit-img {
+    border-radius: 5px;
+    height: 90px;
+  }
+
+  .capstone-txt {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    color: #a0a0a0;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+}
+
+/* ------------------------------------    TABLET     -------------------------------------------- */
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  /* --------------------------------------SECTION-1-------------------------------------- */
+
+  /* --------------------------------------SECTION-1-------------------------------------- */
+  .navbar-brand {
+    font-size: 35px;
+  }
+
+  /* .brand-logo {
+    
+  } */
+
+  .intro-img {
+    margin-top: 20px;
+    height: 200px;
+  }
+
+  .intro-text {
+    padding: 3% 0 0 3%;
+  }
+
+  .add2home {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    color: #383754;
+    bottom: -50px;
+  }
+
+  .add2home button {
+    margin: 6px;
+    border-radius: 60px;
+  }
+
+  .twinbtns-pc {
+    display: none;
+  }
+  .twinbtns-mob {
+    display: block;
+  }
+
+  /* ----------------------------------------   SECTION-2   ---------------------------------- */
+
+  .section2 {
+    margin-top: 120px;
+  }
+
+  .upload-img {
+    height: 90px;
+  }
+
+  .img-input-sec h2 {
+    font-family: "Fira Sans", sans-serif;
+    color: #383754;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .img-input-sec button {
+    margin: 20px;
+    border-radius: 40px;
+  }
+
+  .video-canvas {
+    text-align: center;
+  }
+
+  #user-input-img {
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+  }
+
+  #snap-canvas {
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+  }
+
+  .upload-btn-div {
+    text-align: center;
+  }
+
+  .custom-upload label,
+  .custom-upload input {
+    text-align: center;
+  }
+
+  .upload-btns-add {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+  }
+
+  .fa-whatsapp:hover {
+    color: rgb(24, 173, 24);
+  }
+
+  /* -------------------------------------SECTION-3------------------------------------------- */
+
+  /* ---------------------------------------FOOTER-SECTION---------------------------------- */
+
+  .vit-logo {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    text-align: left;
+    margin-left: 15px;
+  }
+
+  .vit-img {
+    border-radius: 5px;
+    height: 90px;
+  }
+}
