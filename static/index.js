@@ -154,6 +154,28 @@ navigator.mediaDevices
 
 var canvas = document.getElementById("snap-canvas");
 var context = canvas.getContext("2d");
+let a;
 snap.addEventListener("click", function () {
   context.drawImage(video, 0, 0, 300, 300);
+  a = 1;
+});
+
+const downloadImg = document.getElementById("download-img");
+
+downloadImg.addEventListener("click", function () {
+  //IE/Edge support PNG only
+  if (a == 1) {
+    if (window.navigator.msSaveBlob) {
+      window.navigator.msSaveBlob(canvas.msToBlob(), "image-captioner.png");
+    } else {
+      const a = document.createElement("a");
+      document.body.appendChild(a);
+      a.href = canvas.toDataURL();
+      a.download = "image-captioner.png";
+      a.click();
+      document.body.removeChild(a);
+    }
+  } else {
+    alert("Please capture the image and proceed with download.");
+  }
 });

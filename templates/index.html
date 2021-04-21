@@ -66,7 +66,7 @@
     <!-- ---------------------- social links , loading & custom pop up   --------------------- -->
 
     <div id="loading">
-      <img src="/static/loading.svg" alt="Loading" />
+      <img src="/static/intro-img.svg" alt="Loading" />
       <h3>Audible Image Captioner</h3>
     </div>
 
@@ -211,7 +211,7 @@
     <!-- ------------- UPLOAD IMAGE ----------------------------- -->
     <section class="section2" id="upload-img-id">
       <div class="img-input-sec">
-        <h2>Upload/Capture your image.</h2>
+        <h2>Capture/Upload your image.</h2>
 
         <img class="upload-img" src="/static/upload-img.svg" alt="Upload Img" />
 
@@ -243,38 +243,35 @@
             </button> -->
           </div>
         </div>
-
         <div class="video-canvas camera-upload">
           <canvas id="snap-canvas" width="292" height="292"></canvas>
+
           <div>
             <button
-              id="upload-img"
+              id="download-img"
               class="btn btn-dark btn-lg btn-md btn-sm"
-              title="Upload Image"
-              onclick=""
+              title="Download Image"
             >
-              Upload Image <i class="fas fa-upload"></i>
+              Download <i class="fas fa-download"></i>
             </button>
           </div>
         </div>
 
         <br />
 
-        <h2>OR</h2>
+        <h2><i class="fas fa-chevron-down"></i></h2>
 
         <div class="custom-upload">
           <br />
-          <form
-            action="{{url_for('after')}}"
-            enctype="multipart/form-data"
-            method="post"
-          >
+          <form method="POST" action="/" enctype="multipart/form-data">
             <label for="myfile"><h4>Choose an image:</h4></label>
             <input
               type="file"
               id="myfile"
-              name="myfile"
+              name="userfile"
+              placeholder="Your image"
               accept="image/png, image/jpeg"
+              required
             /><br /><br />
             <button
               type="submit"
@@ -314,7 +311,28 @@
           <h2>Image Captioning.</h2>
           <h6>Text / Audio</h6>
 
-          <div></div>
+          {% if your_result %}
+
+          <div class="video-canvas">
+            <img
+              style="
+                margin: 15px;
+                border-radius: 5px;
+                border: 1px solid gray;
+                padding: 3px;
+              "
+              src="{{your_result['image']}}"
+              class=""
+              width="300"
+              height="300"
+            />
+          </div>
+          <div class="video-canvas">
+            <br />
+            <h5>Generated Caption :</h5>
+            <p>{{ your_result['caption'] }}</p>
+          </div>
+          {% endif %}
         </div>
       </div>
     </section>

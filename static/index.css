@@ -389,6 +389,14 @@ a:hover {
   border: 1px solid gray;
   padding: 3px;
 }
+
+.retrieved-img {
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 3px;
+}
+
 .upload-btn-div {
   text-align: center;
 }
