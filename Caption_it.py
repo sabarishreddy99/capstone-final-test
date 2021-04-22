@@ -19,8 +19,8 @@ from keras.utils import to_categorical
 from keras.layers import Input, Dense, Dropout, Embedding, LSTM
 from keras.layers.merge import add
 import os
-from gtts import *
-from playsound import playsound
+# from gtts import *
+# from playsound import playsound
 
 # In[4]:
 
