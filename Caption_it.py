@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import json
-import tensorflow as tf
+# import tensorflow as tf
 import pickle
 from keras.applications.vgg16 import VGG16
 from keras.applications.resnet50 import ResNet50, preprocess_input, decode_predictions
